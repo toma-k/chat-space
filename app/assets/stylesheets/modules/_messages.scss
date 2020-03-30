@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+.side_bar {
+  float: left;
+  width: 300px;
+  background-color: $derkgray;
+  height: 100vh;
+  .header {
+    background-color: #253141;
+    height: 100px;
+    font-size: 16px;
+    @include displayflex;
+    padding: 0 20px;
+    &_box{
+      @include displayflex;
+      width: 100%;
+      color: $white;
+      height: 20px;
+      &--name {
+        font-size: 16px;
+      }
+      .header_btn {
+        color: $white;
+        text-decoration: none;
+      }
+      .header_btn-edit {
+        margin-right: 5px;
+      }
+    }
+  }
+  .group_list {
+    background-color: $derkgray;
+    height: calc(100vh - 100px);
+    padding: 0 20px;
+    .group {
+      color: $white;
+      &_name {
+        font-size: 15px;
+        padding: 20px 0 5px 0;
+      }
+      &_least-message {
+        font-size: 11px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+.main_chat {
+  float: left;
+  background-color: $graywhite;
+  width: calc(100vw - 300px);
+  height: 100vh;
+  display: block;
+  .main_header {
+    background-color: $white;
+    height: 100px;
+    padding: 0 40px;
+    @include displayflex;
+    .group_info {
+      .main_group-name {
+        font-size: 20px;
+        color: $gray;
+        padding:35px 0 15px 0; 
+      }
+      .menber_list {
+        font-size: 12px;
+        color: $lightgray;
+        padding-bottom: 0;
+      }
+    }
+    .edit_btn {
+      width: 72px;
+      height: 40px;
+      margin: 28px 0 32px 0;
+      line-height: 40px;
+      text-align: center;
+      border: 1px solid $lightblue;
+    }
+    .edit_btn-icon {
+      text-decoration: none;
+      color: $lightblue;
+      font-size: 16px;
+    }
+  }
+  .messages {
+    background-color: $graywhite;
+    height: calc(100vh - 190px);
+    padding: 35px 40px;
+    .message {
+      padding-bottom: 46px;
+      &_upper-info {
+        display: flex;
+        margin-bottom: 12px;
+        &_name {
+          font-size: 16px;
+          color: $gray;
+        }
+        &_date {
+          font-size: 12px;
+          color: $lightgray;
+          margin-left: 10px;
+        }
+      }
+      &_text {
+        font-size: 14px;
+        color: #434A54;
+      }
+    }
+  }
+  .footer {
+    background-color:#d2d2d2;
+    height: 90px;
+    padding: 20px 40px;
+    .message_form {
+      display: flex;
+      &-box {
+        display: flex;
+        position: relative;
+        width: 100%;
+        .format {
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+        }
+        .icon_image {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          .image_file {
+            display: none;
+          }
+        }
+      }
+      .submit_btn {
+        margin-left: 15px;
+        background-color: $lightblue;
+        color: $white;
+        height: 50px;
+        width: 100px;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.main_chat
+  .main_header
+    .group_info
+      .main_group-name
+        name
+      .menber_list
+        menber
+    .edit_btn
+      = link_to "#", class: "edit_btn-icon" do
+        edit
+  .messages
+    .message
+      .message_upper-info
+        .message_upper-info_name
+          name
+        .message_upper-info_date
+          2020.3.3
+      .message_text
+        text
+    .message
+      .message_upper-info
+        .message_upper-info_name
+          name
+        .message_upper-info_date
+          2023.10.2
+      .message_text
+        text-text
+  
+  .footer
+    %form.message_form 
+      .message_form-box
+        %input.format{type: "text", placeholder: "type a text"}
+        %label{class: "icon_image"}
+          = icon('fas', 'image')
+          %input.image_file{type: "file"}
+      %input.submit_btn{type: "submit", value: "Send"}
