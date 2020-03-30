@@ -4,21 +4,15 @@
       .header_box--name
         = current_user.name
       %header_box__icons
-        = link_to "#", class: "header_btn header_btn-edit" do
+        = link_to new_group_path, class: "header_btn header_btn-edit" do
           <i class='far fa-edit'></i>
         = link_to edit_user_path(current_user), class: "header_btn header_btn-setting" do
           <i class="fas fa-cog"></i>
-    
-    
   .group_list
-    .group
-      .group_name
-        name
-      .group_least-message
-        message
-    .group
-      .group_name
-        name
-      .group_least-message
-        message
-
+    - current_user.groups.each do |group|
+      .group
+        = link_to "#", class: "group_box" do
+          .group_name
+            = group.name
+          .group_least-message
+            message

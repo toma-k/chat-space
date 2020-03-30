@@ -35,13 +35,18 @@
     padding: 0 20px;
     .group {
       color: $white;
+      &_box {
+        text-decoration: none;
+      }
       &_name {
         font-size: 15px;
         padding: 20px 0 5px 0;
+        color: $white;
       }
       &_least-message {
         font-size: 11px;
         margin-bottom: 40px;
+        color: $white;
       }
     }
   }
