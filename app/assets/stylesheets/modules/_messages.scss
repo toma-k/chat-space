@@ -4,7 +4,7 @@
 .side_bar {
   float: left;
   width: 300px;
-  background-color: $derkgray;
+  background-color: $side_blue_dark;
   height: 100vh;
   .header {
     background-color: #253141;
@@ -30,7 +30,7 @@
     }
   }
   .group_list {
-    background-color: $derkgray;
+    background-color: $side_blue_dark;
     height: calc(100vh - 100px);
     padding: 0 20px;
     .group {
@@ -66,7 +66,7 @@
       }
       .menber_list {
         font-size: 12px;
-        color: $lightgray;
+        color: $light_gray;
         padding-bottom: 0;
       }
     }
@@ -76,11 +76,11 @@
       margin: 28px 0 32px 0;
       line-height: 40px;
       text-align: center;
-      border: 1px solid $lightblue;
+      border: 1px solid $light_blue;
     }
     .edit_btn-icon {
       text-decoration: none;
-      color: $lightblue;
+      color: $light_blue;
       font-size: 16px;
     }
   }
@@ -99,7 +99,7 @@
         }
         &_date {
           font-size: 12px;
-          color: $lightgray;
+          color: $light_gray;
           margin-left: 10px;
         }
       }
@@ -135,7 +135,7 @@
       }
       .submit_btn {
         margin-left: 15px;
-        background-color: $lightblue;
+        background-color: $light_blue;
         color: $white;
         height: 50px;
         width: 100px;

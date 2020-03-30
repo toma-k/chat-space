@@ -2,11 +2,11 @@
   .header
     .header_box
       .header_box--name
-        name
+        = current_user.name
       %header_box__icons
         = link_to "#", class: "header_btn header_btn-edit" do
           <i class='far fa-edit'></i>
-        = link_to "#", class: "header_btn header_btn-setting" do
+        = link_to edit_user_path(current_user), class: "header_btn header_btn-setting" do
           <i class="fas fa-cog"></i>
     
     
