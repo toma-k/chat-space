@@ -2,35 +2,20 @@
   .main_header
     .group_info
       .main_group-name
-        name
+        = @group.name
       .menber_list
-        menber
+        - @group.users.each do |user|
+          = user.name
     .edit_btn
-      = link_to "#", class: "edit_btn-icon" do
+      = link_to edit_group_path(@group), class: "edit_btn-icon" do
         edit
   .messages
-    .message
-      .message_upper-info
-        .message_upper-info_name
-          name
-        .message_upper-info_date
-          2020.3.3
-      .message_text
-        text
-    .message
-      .message_upper-info
-        .message_upper-info_name
-          name
-        .message_upper-info_date
-          2023.10.2
-      .message_text
-        text-text
-  
+    = render @messages
   .footer
-    %form.message_form 
-      .message_form-box
-        %input.format{type: "text", placeholder: "type a text"}
-        %label{class: "icon_image"}
+    = form_for [@group, @message], class: 'new_message' do |f|
+      .new_message-box
+        = f.text_field :content, class: 'format', placeholder: "type a text"
+        = f.label :image, class: 'icon_image' do
           = icon('fas', 'image')
-          %input.image_file{type: "file"}
-      %input.submit_btn{type: "submit", value: "Send"}
+          = f.file_field :image, class: 'image_file'
+      = f.submit 'Send' , class: 'submit_btn'
