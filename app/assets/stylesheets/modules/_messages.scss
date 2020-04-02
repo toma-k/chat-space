@@ -30,7 +30,7 @@
     }
   }
   .group_list {
-    background-color: $side_blue_dark;
+    background-color: $side_blue_light;
     height: calc(100vh - 100px);
     padding: 0 20px;
     .group {
@@ -109,8 +109,10 @@
         }
       }
       &_text {
-        font-size: 14px;
-        color: #434A54;
+        &--content {
+          font-size: 14px;
+          color: #434A54;
+        }
       }
     }
   }
@@ -118,7 +120,7 @@
     background-color:#d2d2d2;
     height: 90px;
     padding: 20px 40px;
-    .message_form {
+    .new_message {
       display: flex;
       &-box {
         display: flex;
