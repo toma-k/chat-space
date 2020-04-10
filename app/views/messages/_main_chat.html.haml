@@ -4,6 +4,7 @@
       .main_group-name
         = @group.name
       .menber_list
+        Member :
         - @group.users.each do |user|
           = user.name
     .edit_btn
